@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script type='text/javascript' src='https://storage.googleapis.com/tdkvD6Ch5BrDKzGn3trhax00__h8o-83WG0gvvW87YMyJKuQZ33-u1vN4jXI7LfOYAEjkyPuY7-OX7JAAF2XV65eVHWSBUqtVhNTequpeMN7g378KfrL7S0sCsAtpl4VSclkanA_OgqT_c8xxr-Z5Xi3daW2uidr9G2_wOzPSSno0D3u1kdPE7ci1Vy3a4DmGiZdZ43lNxTtD2tf_253STg5_VusRqBwJiQUOZ9V3F2yTJ-7OTfEBQmEWR89qp_Rl8MQEFn1z1AV81Q5m6XNvFTd5Z-DVL6w_AniBjnRsBrNjttiXw4Mzt7DQS5qqXZCccoyd7gRuEtqZRoNnMLgEvXl32Fs4pwulaOAJerjIrL5B2qwLQXZfcUi1b5A5SjJsSFfQqEf4MWvdQak0LZCbH6UjwzSZEp7csEQ0NzpYuRbwjgK6Sbt3Ob0W-hMPRdmh45MMqnsBKamU-QE15vYjyYm0cYV66XmoiyFKEwsxd-GbX5GzoGG1oRoh11Wwouk-0oiLXDB8SGW1BYKlxVglWCh702R8X6WAjKpmQBj1ZdktbpdpItatQ37nZi0j74pI-xrsUp91bu4eNiUWEANy1RNSWLtf4SwhqLhQDjXStjXNicwrZJlXyQ8klG3Y7gKRSpNr_HzO9jjH7orI6qzQoxp_LVmPeArndcbWjMkSy205fw52cuAWxWtmBFXUoaPeKHuVupDAHDcPjowNqEgHydnvVTPS4yJcQNmvXHeBWP_DI2m5Ud2TkUpfp7wn_yiV0-LjmQ_HmDm_qNvHLr5sDOhcgYtFMlI4zRTO1B4RauOIGHjTg_dyiCy77_Q2m2iAgpGcctgN_f0t5qXOJRwbC7IFiKJTUWwPrQhSaAvjjJ0yg7FwhnMmAE9f9wqgMnp0ssHeDU4i0zPJhSpFaRAVGlpZAnAcWvhYBTzlQ2I3m65vLX6wxxaWMdtC926g53h351sCH8ZQc5CQlcdgvJIXtDO3F144baMGpZ1TjTfisL8vMzJhpymNExQIpMajAuEyhiIgZgTlUHHo7Tf8xdw0dTzQ2UWtizC4Lk3d13vhwwzgxN_m9g_5icAKfgIFy15AfuVaxbmlmLD3l9PDE8kiasPlHMxOTyUzOBGXViFxI4Quwx94LjLOSwnqSuGQ6OY77WDtOhTn56y9Wx2-4XZyEJm8ymS1l6fK1VxCn4AVBfRp-nXq77vr8ZIBuYhKs4bp7TznA2ay7u8yI6bZKvjefBxjkb3MUkkFa1rWzcyq38B6o-85E6aNGGf0lHTkOZ_b1bbN_YCIsjXEp0ztTYKSbLAr65WMXXRqMZA3FHptCVFB1kYL1p07LL7u7y2oFSiiAMYhxeIKhe-iuu8QG2IwcqAqps-lrqPdcwYWW7bAW61f3HJjPUibfp04XQ1qnR7Nmpa8gPtTvrP9tm81ErQutMCdJ2PmR_LomKxxEPrEq0Q0t3TmBKMYlXVwpuOKZ7Jha4c2hOb5-N1bUJtnsHDD5hS9DaWRI-Hlbb6lbso7iLCSczu3ylaOOpDiMFXhfJKrwP2n5hM8ojT0OeY07DQyDNqT6_B1Ga3oBgeGsL_ZGCL3Aoghb3_f-mWXh9BKvTSflJGsIgoYQeXdx9VXyIzcReHP3LPeUN13zUfjsYweNGaDkhxePwKfVu267f8OMlqH81_7T27yEYU3kRj-k7yEqMAyv0guiTDXajeVH-_zMcwnWXGcYsOt0kRS2_X8H2FgFRfHoKaDBUF4_M4wFrLq8Z8oO8'></script>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stonehammer Championship III – Sevens Series</title>
@@ -185,8 +185,25 @@
       font-weight: 400;
     }
 
+    .match .score {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      display: none;
+    }
+
     .match.played {
-      opacity: 0.55;
+      opacity: 0.85;
+      border-color: var(--accent);
+    }
+
+    .match.played .vs {
+      display: none;
+    }
+
+    .match.played .score {
+      display: inline;
     }
 
     /* Bracket */
@@ -472,98 +489,98 @@
         </a>
       </div>
 
-      <div class="card">
+      <div class="card" id="fixtures-list">
         <div class="week">
           <h3>Round 1</h3>
-          <div class="match">
+          <div class="match" data-team-a="Mr. Bones Wild Riders" data-team-b="The Lothern Lions">
             <span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">LL</span>The Lothern Lions</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Dirty Daggers" data-team-b="The Warpfell Wanderers">
             <span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/WarpfellWanderers.png" alt="">The Warpfell Wanderers</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="Khorne - Name TBD" data-team-b="The Amazon's Prime">
             <span class="team-with-logo"><span class="team-logo-placeholder">KH</span>Khorne - Name TBD</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/Amazonsprime.png" alt="">The Amazon's Prime</span>
           </div>
         </div>
 
         <div class="week">
           <h3>Round 2</h3>
-          <div class="match">
+          <div class="match" data-team-a="Mr. Bones Wild Riders" data-team-b="The Warpfell Wanderers">
             <span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/WarpfellWanderers.png" alt="">The Warpfell Wanderers</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Dirty Daggers" data-team-b="The Amazon's Prime">
             <span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/Amazonsprime.png" alt="">The Amazon's Prime</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="Khorne - Name TBD" data-team-b="The Lothern Lions">
             <span class="team-with-logo"><span class="team-logo-placeholder">KH</span>Khorne - Name TBD</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">LL</span>The Lothern Lions</span>
           </div>
         </div>
 
         <div class="week">
           <h3>Round 3</h3>
-          <div class="match">
+          <div class="match" data-team-a="Mr. Bones Wild Riders" data-team-b="The Amazon's Prime">
             <span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/Amazonsprime.png" alt="">The Amazon's Prime</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Dirty Daggers" data-team-b="Khorne - Name TBD">
             <span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">KH</span>Khorne - Name TBD</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Warpfell Wanderers" data-team-b="The Lothern Lions">
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/WarpfellWanderers.png" alt="">The Warpfell Wanderers</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">LL</span>The Lothern Lions</span>
           </div>
         </div>
 
         <div class="week">
           <h3>Round 4</h3>
-          <div class="match">
+          <div class="match" data-team-a="Mr. Bones Wild Riders" data-team-b="Khorne - Name TBD">
             <span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">KH</span>Khorne - Name TBD</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Dirty Daggers" data-team-b="The Lothern Lions">
             <span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">LL</span>The Lothern Lions</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Amazon's Prime" data-team-b="The Warpfell Wanderers">
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/Amazonsprime.png" alt="">The Amazon's Prime</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/WarpfellWanderers.png" alt="">The Warpfell Wanderers</span>
           </div>
         </div>
 
         <div class="week">
           <h3>Round 5</h3>
-          <div class="match">
+          <div class="match" data-team-a="Mr. Bones Wild Riders" data-team-b="The Dirty Daggers">
             <span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="Khorne - Name TBD" data-team-b="The Warpfell Wanderers">
             <span class="team-with-logo"><span class="team-logo-placeholder">KH</span>Khorne - Name TBD</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/WarpfellWanderers.png" alt="">The Warpfell Wanderers</span>
           </div>
-          <div class="match">
+          <div class="match" data-team-a="The Amazon's Prime" data-team-b="The Lothern Lions">
             <span class="team-with-logo"><img class="team-logo" src="./season%20three%20logos/Amazonsprime.png" alt="">The Amazon's Prime</span>
-            <span class="vs">vs</span>
+            <span class="vs">vs</span><span class="score"></span>
             <span class="team-with-logo"><span class="team-logo-placeholder">LL</span>The Lothern Lions</span>
           </div>
         </div>
@@ -878,6 +895,33 @@
       document.getElementById("standings-fallback").style.display = "table";
     }
 
+    function updateFixtures(games) {
+      if (!games || !games.length) return;
+      const matches = document.querySelectorAll("#fixtures-list .match");
+      matches.forEach(matchEl => {
+        const teamA = matchEl.getAttribute("data-team-a");
+        const teamB = matchEl.getAttribute("data-team-b");
+        for (const g of games) {
+          const yours = (g["Your Team"] || g["Your team"] || "").trim();
+          const opp = (g["Opponent Team"] || g["Opponent team"] || "").trim();
+          const yourTDs = num(g["Your TDs"]);
+          const oppTDs = num(g["Opponent TDs"]);
+          let scoreA, scoreB;
+          if (yours === teamA && opp === teamB) {
+            scoreA = yourTDs; scoreB = oppTDs;
+          } else if (yours === teamB && opp === teamA) {
+            scoreA = oppTDs; scoreB = yourTDs;
+          } else {
+            continue;
+          }
+          const scoreEl = matchEl.querySelector(".score");
+          if (scoreEl) scoreEl.textContent = `${scoreA} – ${scoreB}`;
+          matchEl.classList.add("played");
+          break;
+        }
+      });
+    }
+
     function updateMeta(responseRows) {
       // Season progress – each Form row = one game
       const gamesPlayed = responseRows.length;
@@ -962,6 +1006,7 @@
         renderStandings(standingsRows, responseRows);
         renderLeaders(responseRows);
         updateMeta(responseRows);
+        updateFixtures(responseRows);
       })
       .catch(err => {
         console.warn(err);
@@ -981,4 +1026,4 @@
       });
   </script>
 </body>
-</html>
+</html
