@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script type='text/javascript' src='https://storage.googleapis.com/Ess417C7Rppui2E0VJSFuDtKNXDuxBco4Bm0b-nsu3OxdqBdRMIhht8ESe-P9FF0AdKyis_NJ1pb9xqzQg3-GA0nxBfQnVlirIUXTa36AGXuxYAA-x3OJ7OKf1ZHKe1LjBELJPTtNgXFHwBJyzKS5FvPQMY0S2lyVOAT3Do2jMtgoGDOSqYqhkzIFsoaW10UiyYbcASYVU10bHqljPVvHturzCSQphpNOTKKX4z7PpsWrch1TmDREswTBqAstlp4Cofb5KplOq3I7FO1op1R3Xx_em1-7nA9TIpPC0ExI_XQogxyiv8Sup2xwuP_B5OvMo5Hn3bHg1n6RdjSGI0yP4IOpOXy7Gz6dg8Na2VPdLW-uafBf54falK-KZgEyylnyYBGFs9Uvov9-tZ8SIZRP1nzj3A5C_3TB0VF0vEboOLagT_K56_v36STurlllCI7nqRvAAXDb-g4lbpVAWY9zpXagEW7Y8JUpfCP1yFiCp3dzidaJSbzNM4zT8rWzlvWU613bOuDmSP3RTihGKdHKeXr9IOS60Z2xEqeZjk6sBJ9Vg7K7Cv60aq7C_9oxYeKpLULaKkyaYAs-YDmIpuJlpyfHz-JpseVpyzvB6I3gpmpWfL59ak-IcZL5XvPs0j5CVXlJrd28-79vJFT4C1VTKork4uWfjzdWntJSu5Hl2pAEzVjRg-gXRJcRRKG0F09msXPL-aQOeXpsvFIUe9zzZnz2jwaAOQWV-JvcphiKHsCI28V_WOPzAUlzGquuEt2si6Qy-RhVI3q4Sfx1eEmZudEXNwuXq4IpB60G6uve65Da8gQRhtBQPhPZKe_x-DKzJyPwrCqccABDn4QJIj1pvK9ckqX6D_pob7DGSEThSplC05Vha7T4Lf1IH9M-l0kWgcrcLHKMT3Dv5G8Hox44QYsIYBhAtn9CPnc_OmE1rgb9JQC2WtfblDgPG02CLX1TjNlrP9tyntzC7g27EsU0UFd573Lx1yV1CkCdSkZEXvKTDJGHRw9ETMbBHionk40BGDQGk9ujSk9Ydq8NcCMo04UjhGmgbDvIMuPgpBx3vLm-wZdHEu5fLbnjJbV7BVhVSUlnzAn3k8cEExddcRVz9n6deDyS3McYmdMHtwTkH9SHARA1Nc0R6_HdgRpPg1pjrv0Ca039gBK9xpmUGpDtvAS0ZnnclR-rTEceiq9-CtwSfnp23UHndSYSKSopLPq-bk3mRmhe9F0VgE67bU2rmWT84FG6YB1D_oNqlqyc0WNU27Uufibv5o_H8zPw5mrXfb4dWQZ0XOsClsg0QwBmzdGsOtvJUuRt3a8RZUVYFJaeh18tKWLQ95fKTP5vWcJwoW4WyR__cb6yqTWQiBUHuFIyBXl-kv20blbgIgrpAua-PZx0fUgtqVkBBPVFlE7vQz16xzugygZzyAa_1JAEVLO3tSKfhfTtbou6L_2PH9QLhCh2MwHzj7v5MPqaN0mhk2FQ6eokmlfBYiPTd5b4ZHTLcO7CpSMAZiFish_v9jGupXs02tKvNfxu9ZWeLrCgtgkX2duQ67Ze6hxQnnlWj5KA-_6zcjWRJzlywYyzRF7VGKbh_HeAEjbw2POfSgAH9odcsVueacw5FJwDVuisapjsodz_OgAqgyT3_h3s1qe0k0xxOWlBW75RvxiqLZySKrUAo-ATUNFFqDKdz81YxDT20xoSLVDurY1KQOOePk3L25ICokBR-dPedjGu1EJ8kTgKKRNA7qR4e1Li-hxZ7kpzec'></script>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stonehammer Championship III – Sevens Series</title>
@@ -155,6 +155,29 @@
     .pos-1 td:first-child::before { content: "🥇 "; }
     .pos-2 td:first-child::before { content: "🥈 "; }
     .pos-3 td:first-child::before { content: "🥉 "; }
+
+    /* Top-two bye row emphasis */
+    tr.pos-1,
+    tr.pos-2 {
+      background: rgba(138, 109, 59, 0.12);
+    }
+    tr.pos-1 td:first-child,
+    tr.pos-2 td:first-child {
+      box-shadow: inset 3px 0 0 var(--gold);
+    }
+    .bye-tag {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      vertical-align: middle;
+    }
 
     /* Fixtures */
     .week {
@@ -436,11 +459,11 @@
           </thead>
           <tbody>
             <tr class="pos-1">
-              <td><span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span></td>
+              <td><span class="team-with-logo"><span class="team-logo-placeholder">MB</span>Mr. Bones Wild Riders</span> <span class="bye-tag">Bye</span></td>
               <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
             </tr>
             <tr class="pos-2">
-              <td><span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span></td>
+              <td><span class="team-with-logo"><span class="team-logo-placeholder">DD</span>The Dirty Daggers</span> <span class="bye-tag">Bye</span></td>
               <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
             </tr>
             <tr class="pos-3">
@@ -464,6 +487,9 @@
         <div id="standings-empty" style="display:none;" class="empty">
           Season hasn’t started yet.<br>Standings will appear after the first results are submitted.
         </div>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">
+          Top two seeds earn a playoff bye (highlighted above).
+        </p>
       </div>
       <div style="margin-top:0.75rem;">
         <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;">
@@ -592,22 +618,12 @@
       <h2>Playoffs</h2>
       <div class="card">
         <p class="spp-note">
-          Post-season format is being finalized. The bracket will appear here once everything is locked in.
+          After the round-robin, teams are seeded 1–6 by standings. Seeds 1 and 2 earn a bye into the semis — winning the regular season still matters.
         </p>
-        <div class="empty" style="padding:2rem 1rem;">
-          Post-season being finalized.<br>
-          <span style="font-size:0.85rem;">Double-elimination structure is drafted and ready to publish.</span>
-        </div>
-      </div>
 
-      <!-- SAVED BRACKET — restore by moving this block back into the visible card above
-      <div class="card">
-        <p class="spp-note">
-          After the round-robin, teams are seeded 1–6 by standings. Seeds 1 and 2 receive a bye into the winners semis — regular season still matters.
-        </p>
         <div class="bracket">
           <div>
-            <h3 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem;">Winners Bracket</h3>
+            <h3 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem;">Play-in Round</h3>
             <div class="bracket-round">
               <div class="bracket-match">
                 <div class="label">Play-in</div>
@@ -620,73 +636,41 @@
                 <div class="team">Seed 5</div>
               </div>
             </div>
-            <div class="bracket-round" style="margin-top:1rem;">
+          </div>
+
+          <div>
+            <h3 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem;">Semifinals</h3>
+            <div class="bracket-round">
               <div class="bracket-match">
-                <div class="label">Winners Semi 1</div>
+                <div class="label">Semi 1</div>
                 <div class="team">Seed 1 <span style="color:var(--muted);font-size:0.75rem;">(bye)</span></div>
                 <div class="team">Winner 4v5</div>
               </div>
               <div class="bracket-match">
-                <div class="label">Winners Semi 2</div>
+                <div class="label">Semi 2</div>
                 <div class="team">Seed 2 <span style="color:var(--muted);font-size:0.75rem;">(bye)</span></div>
                 <div class="team">Winner 3v6</div>
               </div>
             </div>
-            <div class="bracket-round" style="margin-top:1rem;">
-              <div class="bracket-match">
-                <div class="label">Winners Final</div>
-                <div class="team">Winner Semi 1</div>
-                <div class="team">Winner Semi 2</div>
-              </div>
-            </div>
           </div>
+
           <div>
-            <h3 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem;">Losers Bracket</h3>
-            <div class="bracket-round">
-              <div class="bracket-match">
-                <div class="label">Losers Round 1</div>
-                <div class="team">Loser of 3v6</div>
-                <div class="team">Loser of 4v5</div>
-              </div>
-            </div>
-            <div class="bracket-round" style="margin-top:1rem;">
-              <div class="bracket-match">
-                <div class="label">Losers Round 2</div>
-                <div class="team">Winner LR1</div>
-                <div class="team">Loser of Winners Semi 1</div>
-              </div>
-            </div>
-            <div class="bracket-round" style="margin-top:1rem;">
-              <div class="bracket-match">
-                <div class="label">Losers Round 3</div>
-                <div class="team">Winner LR2</div>
-                <div class="team">Loser of Winners Semi 2</div>
-              </div>
-            </div>
-            <div class="bracket-round" style="margin-top:1rem;">
-              <div class="bracket-match">
-                <div class="label">Losers Final</div>
-                <div class="team">Winner LR3</div>
-                <div class="team">Loser of Winners Final</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3 style="color:var(--gold);font-size:0.9rem;margin-bottom:0.75rem;">Grand Final</h3>
+            <h3 style="color:var(--gold);font-size:0.9rem;margin-bottom:0.75rem;">Finals</h3>
             <div class="bracket-round">
               <div class="bracket-match" style="border-color:var(--gold);">
                 <div class="label">Championship</div>
-                <div class="team">Winners Final Winner</div>
-                <div class="team">Losers Final Winner</div>
+                <div class="team">Winner Semi 1</div>
+                <div class="team">Winner Semi 2</div>
+              </div>
+              <div class="bracket-match">
+                <div class="label">3rd Place</div>
+                <div class="team">Loser Semi 1</div>
+                <div class="team">Loser Semi 2</div>
               </div>
             </div>
-            <p style="font-size:0.75rem;color:var(--muted);margin-top:0.75rem;">
-              If the losers-bracket team wins the Grand Final, a second “if necessary” game is played.
-            </p>
           </div>
         </div>
       </div>
-      -->
     </section>
 
     <!-- LEAGUE LEADERS -->
@@ -870,8 +854,9 @@
         else if (index === 2) tr.classList.add("pos-3");
 
         const team = row.Team || row.team || "Unknown";
+        const byeTag = (index === 0 || index === 1) ? ' <span class="bye-tag">Bye</span>' : '';
         tr.innerHTML = `
-          <td>${teamBadge(team)}</td>
+          <td>${teamBadge(team)}${byeTag}</td>
           <td>${row["Games Played"] || row.GP || "0"}</td>
           <td>${row.Wins || row.W || "0"}</td>
           <td>${row.Draws || row.D || "0"}</td>
